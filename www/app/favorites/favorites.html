@@ -1,0 +1,41 @@
+<ion-view view-title="FAVORITES" ng-init="getFriends()" >
+  <ion-nav-bar class="bar-positive ">
+           
+            </ion-nav-bar>
+
+ <ion-content >
+
+<div class="list card" ng-repeat="photo in photos">
+
+ <div class="item item-avatar">
+    <img ng-src="{{photo.user.userpic_https_url}}">
+    <h2>{{photo.user.fullname}}</h2>
+    <p>{{photo.user.username}}</p>
+  </div>
+
+  <div class="item item-image">
+    <img ng-src="{{photo.image_url}}">
+  </div>
+<div class="item ">
+   <h3>{{photo.name}}</h3>
+    <p>{{photo.description}}</p>
+  </div>
+  <ul class="photo-data">
+  <li>  <i class="icon ion-star"></i>{{photo.favorites_count}}</li>
+   <li>  <i class="icon ion-eye"></i>{{photo.times_viewed}}</li>
+    <li>  <i class="icon ion-thumbsup"></i>{{photo.positive_votes_count}}</li>
+    </ul>
+
+</div>
+
+  
+   <ion-infinite-scroll
+   immediate-check="false"
+   ng-if="moreDataCanBeLoaded()"
+    on-infinite="loadMore()"
+    distance="5%">
+  </ion-infinite-scroll>
+
+
+  </ion-content >
+

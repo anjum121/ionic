@@ -1,0 +1,33 @@
+/* Empty. Add your own CSS if you like */
+ul.photo-data{
+	width:100%;
+}
+ul.photo-data> li{
+float:left;
+margin: 3%;
+font-size: 19px;
+width:27%;
+text-align: center;
+}
+ul.photo-data> li i{
+
+padding-right: 5px;
+font-size: 22px;
+}
+
+.photo-data .ion-star{
+	color:rgba(255, 179, 0, 0.86);
+}
+.photo-data .ion-eye{
+	color:rgb(59, 93, 99);
+}
+.photo-data .ion-thumbsup{
+	color:rgb(13, 106, 249);
+}
+
+ul.photo-data> li:last-child{
+	text-align: right;
+}
+ul.photo-data> li:first-child{
+	text-align: left;
+}
